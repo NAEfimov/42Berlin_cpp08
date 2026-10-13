@@ -1,8 +1,20 @@
-#ifndef EASYFIND_HPP
-#define EASYFIND_HPP
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/13 21:05:01 by nefimov           #+#    #+#             */
+/*   Updated: 2026/10/13 21:05:02 by nefimov          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <algorithm>
-#include <stdexcept>
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
+
+# include <algorithm>
+# include <stdexcept>
 
 template <typename T>
 typename T::iterator easyfind(T &container, int value)
