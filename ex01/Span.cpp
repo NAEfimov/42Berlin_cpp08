@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 21:05:43 by nefimov           #+#    #+#             */
-/*   Updated: 2026/10/13 21:05:44 by nefimov          ###   ########.fr       */
+/*   Updated: 2026/10/15 14:58:19 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ unsigned int Span::shortestSpan() const
 	std::vector<int> sorted(_numbers);
 	std::sort(sorted.begin(), sorted.end());
 
-	unsigned long long shortest = std::numeric_limits<unsigned int>::max();
+	long shortest = std::numeric_limits<unsigned int>::max();
 	for (std::vector<int>::const_iterator it = sorted.begin() + 1;
 		 it != sorted.end(); ++it)
 	{
-		const unsigned long long distance = static_cast<unsigned long long>(
-			static_cast<long long>(*it) - static_cast<long long>(*(it - 1)));
+		const long distance = static_cast<long>(
+			static_cast<long>(*it) - static_cast<long>(*(it - 1)));
 		if (distance < shortest)
 			shortest = distance;
 	}
@@ -71,7 +71,7 @@ unsigned int Span::longestSpan() const
 
 	const int minimum = *std::min_element(_numbers.begin(), _numbers.end());
 	const int maximum = *std::max_element(_numbers.begin(), _numbers.end());
-	const unsigned long long distance = static_cast<unsigned long long>(
-		static_cast<long long>(maximum) - static_cast<long long>(minimum));
+	const long distance = static_cast<long>(
+		static_cast<long>(maximum) - static_cast<long>(minimum));
 	return static_cast<unsigned int>(distance);
 }

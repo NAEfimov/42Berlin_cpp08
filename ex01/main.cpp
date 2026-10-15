@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 21:05:17 by nefimov           #+#    #+#             */
-/*   Updated: 2026/10/13 21:05:18 by nefimov          ###   ########.fr       */
+/*   Updated: 2026/10/15 14:56:12 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ static bool reportTest(const char *name, bool passed)
 static bool testExerciseExample()
 {
 	Span span(5);
-	span.addNumber(6);
-	span.addNumber(3);
-	span.addNumber(17);
+	span.addNumber(-2);
 	span.addNumber(9);
+	span.addNumber(17);
+	span.addNumber(0);
 	span.addNumber(11);
-	return span.shortestSpan() == 2 && span.longestSpan() == 14;
+	return span.shortestSpan() == 2 && span.longestSpan() == 19;
 }
 
 static bool testCapacityLimit()
