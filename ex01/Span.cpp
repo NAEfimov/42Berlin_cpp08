@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 21:05:43 by nefimov           #+#    #+#             */
-/*   Updated: 2026/10/15 16:03:19 by nefimov          ###   ########.fr       */
+/*   Updated: 2026/10/15 16:06:09 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ Span &Span::operator=(const Span &other)
     return *this;
 }
 
-Span::~Span()
-{
-}
+Span::~Span() {}
 
 void Span::addNumber(int number)
 {
