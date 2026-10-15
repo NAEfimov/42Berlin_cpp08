@@ -6,7 +6,7 @@
 /*   By: nefimov <nefimov@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 21:05:01 by nefimov           #+#    #+#             */
-/*   Updated: 2026/10/13 21:05:02 by nefimov          ###   ########.fr       */
+/*   Updated: 2026/10/15 16:03:41 by nefimov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 template <typename T>
 typename T::iterator easyfind(T &container, int value)
 {
-	typename T::iterator result = std::find(container.begin(), container.end(), value);
-	if (result == container.end())
-		throw std::out_of_range("value not found");
-	return result;
+    typename T::iterator result = std::find(container.begin(), container.end(), value);
+    if (result == container.end())
+        throw std::out_of_range("value not found");
+    return result;
 }
 
 template <typename T>
 typename T::const_iterator easyfind(const T &container, int value)
 {
-	typename T::const_iterator result = std::find(container.begin(), container.end(), value);
-	if (result == container.end())
-		throw std::out_of_range("value not found");
-	return result;
+    typename T::const_iterator result = std::find(container.begin(), container.end(), value);
+    if (result == container.end())
+        throw std::out_of_range("value not found");
+    return result;
 }
 
 #endif
